@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio HTML do Bootcamp Santander 2025 - Front-End</title>
+    <link rel="stylesheet" href=".css\style-formulários.css">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/9393/9393395.png">
+</head>
+
+<body>
+    <section id="website-title">
+        <div class="title-content">
+            <img src="https://assets.dio.me/rkO44OeBRslqd4_xCfrfU81zuulhXYMCMGqL0RvsSOk/f:webp/h:120/q:80/L3RyYWNrcy9iZGM3Y2MxOS1jNzk2LTQ2YTItYjc2Ny1lOGJkYzIwMWZjYjgucG5n"
+                alt="Logotipo do Bootcamp Santander 2025 - Front-End" class="logo-bootcamp">
+            <img src="https://assets.dio.me/VTgUqMiPAIgvsFdSvgSnVAB5lrqnNxY_N8h8LknnQys/f:webp/q:80/w:120/L2Fzc2V0cy9kaW9tZS9sb2dvLWZ1bGwuc3Zn"
+                alt="Logotipo do Bootcamp Santander 2025 - Front-End" class="logo-dio">
+        </div>
+        <h1 id="course-title">Curso Primeiros passos com HTML<sup>5</sup></h1>
+    </section>
+
+    <div id="challenge-description">
+        <p>No curso Primeiros Passos com HTML do Bootcamp Santander 2025 - Front-End foi proposto um desafio que
+            consiste em elaborar um Website com estrutura básica, utilizando as tags aprendidas
+            durante as aulas práticas. Este é o Website entregue pela <a
+                href="https://www.linkedin.com/in/flaviafesantos/" target="_blank">Flayfe</a> e inspirado no desing da
+            <a href="https://www.dio.me/" target="_blank">Dio.me</a>.
+        </p>
+    </div>
+    <header id="main-header">
+        <nav id="menu">
+
+            <ul class="menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown"><a href="#">Módulos do curso</a>
+                    <ul class="submenu">
+                        <li><a href="introdução.html" target="_blank">Introdução ao HTML na Prática</a></li>
+                        <li><a href="formulários.html" target="_blank">Trabalhando com Formulários em HTML</a></li>
+                        <li><a href="estrutura.html" target="_blank">Estruturando seu HTML + Formatações</a></li>
+                        <li><a href="midia.html" target="_blank">Trabalhando com Mídias utilizando HTML</a></li>
+                        <li><a href="tabelas.html" target="_blank">Criando Tabelas com HTML</a></li>
+                        <li><a href="semantica.html" target="_blank">Entendendo HTML Semântico</a></li>
+                    </ul>
+                </li>
+                <li><button class="feedback-open-btn" onclick="openPopup()">
+                        <span style="font-size: 40px; line-height: 1; position: relative; top: 15px;">*</span>
+                        Opine aqui!</button></li>
+            </ul>
+        </nav>
+
+        <div id="feedback-popup" class="feedback-popup">
+            <div class="feedback-popup-content">
+                <button class="feedback-close-btn" onclick="closePopup()" aria-label="Close popup">&times;</button>
+                <h3>Deixe aqui sua opinião sobre este site</h3>
+                <textarea id="feedback-message" class="feedback-textarea"
+                    placeholder="Escreva sua mensagem aqui..."></textarea>
+                <button class="feedback-send-btn" onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="forms-section">
+        <div id="forms-summary">
+            <h2>Trabalhando com Formulários em HTML</h2>
+            <p>Existem muitas tags voltadas para formulários facilitando muito na hora de criar interfaces completas
+                para entrada de dados. Achei a tag input super coringa por permitir, através dos seus atributos, adaptar
+                para diversos tipos de campos. Um exemplo é criar um campo para o usuário digitar senha, mantendo a
+                senha escondida com pontos com o atributo password. Também é possível criar um botão com diversas
+                funcionalidades com esta tag, deixando a semântica um pouco de lado.
+                <br>
+                <br>
+                A explicação dos atributos checkbox e radio foi tão rica, que até possíveis problemas foram antecipados
+                na video aula.
+                Um dos problemas é, ao utilizar o tipo radio, caso não informe um name ou não coloque o mesmo name para
+                as opções da questão, o navegador vai manter os valores clicados selecionados, sendo que a
+                característica desse atributo é selecionar uma OU outra opção.
+                <br>
+                <br>
+                Logo abaixo, coloquei um pequeno formulário para exemplificar o conhecimento adquirido nas aulas:
+            </p>
+        </div>
+
+        <div class="form-example">
+            <form method="get">
+                <h3>Formulário de feedback:</h3>
+
+                <label>Nome:</label><input type="text" name="name" required placeholder="Digite seu nome" />
+                <label>Email:</label><input type="email" name="email" required placeholder="seuemail@example.com" />
+                <label>Data do preenchimento:</label><input type="date" /><br><br>
+
+                <label>O que achou dos resumos que fiz para cada módulo:</label><br>
+                <div class="rating-options">
+                    <label>Muito Bom<input type="radio" name="rating" value="Muito Bom" /></label>
+                    <label>Bom<input type="radio" name="rating" value="Bom" /></label>
+                    <label>Esta OK<input type="radio" name="rating" value="Esta OK" /></label>
+                    <label>Melhore bastante<input type="radio" name="rating"
+                            value="Tem que melhorar bastante" /></label>
+                    <label>Náo tem salvação<input type="radio" name="rating"
+                            value="Falhou miseravelmente" /></label>
+                </div>
+
+                <label>Quais itens da estética do site inspirada no site da Dio.me você mais gostou?</label><br>
+                <div class="checkbox-list">
+                    <label><input type="checkbox" name="website-aesthetics[]"
+                            value="Imagens e Favicon do site" />Imagens e Favicon do site</label>
+                    <label><input type="checkbox" name="website-aesthetics[]" value="Cores" />Cores</label>
+                    <label><input type="checkbox" name="website-aesthetics[]"
+                            value="Tipografia" />Tipografia</label>
+                    <label><input type="checkbox" name="website-aesthetics[]" value="Layout" />Layout</label>
+                </div>
+
+                <label>Anexe aqui um print da parte que mais gostou deste site:</label><input type="file" />
+
+                <label>Deixe sua crítica construtiva ou elogio para a autora</label><textarea name="feedback" rows="10"
+                    placeholder="Deixe seu opinião aqui"></textarea>
+
+                <label>De modo geral, qual nota você dá para este site considerando que a autora tem nível muito básico
+                    de conhecimento em HTML e CSS (1-Ruim demais e 10-Excelente Trabalho)</label><input type="number"
+                    min="0" max="10" />
+
+                <div class="form-buttons"><input type="submit" value="Enviar" /><button type="reset">Limpar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer id="main-footer">
+        <div class="footer-links">
+            <a href="https://web.dio.me/" target="_blank" class="footer-link">Dio.me</a>
+            <a href="https://www.santanderopenacademy.com/pt_pt/index.html" target="_blank"
+                class="footer-link">Santander Open Academy</a>
+        </div>
+        <iframe width="35%" height="20" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1733947578&color=%23ff5500&auto_play=true&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+    </footer>
+</body>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init("YOUR_EMAILJS_USER_ID"); // Substitua pelo seu User ID real
+    })();
+
+    function openPopup() {
+        document.getElementById("feedback-popup").style.display = "block";
+    }
+
+    function closePopup() {
+        document.getElementById("feedback-popup").style.display = "none";
+    }
+
+    function sendMessage() {
+        const message = document.getElementById("feedback-message").value;
+
+        if (message.trim() === "") {
+            alert("Please enter your feedback.");
+            return;
+        }
+
+        emailjs.send("your_service_id", "your_template_id", {
+            message: message
+        }).then(function (response) {
+            alert("Message sent successfully!");
+            closePopup();
+            document.getElementById("feedback-message").value = "";
+        }, function (error) {
+            alert("Error sending message. Please try again.");
+            console.error(error);
+        });
+    }
+</script>
+
+
+</html>

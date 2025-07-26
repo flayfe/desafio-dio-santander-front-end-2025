@@ -1,0 +1,255 @@
+body {
+    background-color: rgb(21, 22, 27);
+    color: #FAFAFA;
+    margin: 20px;
+
+    font-family: Segoe UI;
+
+    overflow-x: hidden;
+}
+
+#website-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0px 0px 30px 30px;
+}
+
+.title-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 30px;
+    align-items: center;
+}
+
+.logo-bootcamp {
+    max-height: 100px;
+    height: auto;
+    margin: 20px 0px 10px 0px;
+}
+
+.logo-dio {
+    max-width: 70px;
+    height: auto;
+}
+
+#course-title {
+    color: #e4105d;
+    font-size: 28px;
+}
+
+#challenge-description {
+    background-color: #3b465176;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+
+    border: none;
+    border-radius: 6px;
+    padding: 0px 20px 0px 20px;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 0 0 30px 0;
+}
+
+#challenge-description a {
+    color: #e4105d;
+    text-decoration: none;
+    font-size: 110%;
+    padding: 3px;
+
+
+    transition: transform 0.2s ease;
+}
+
+#challenge-description a:hover {
+    transform: scale(1.01);
+    color: white;
+    background-color:#e4105d;
+    border-radius: 6px;
+    
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background-color: #060606b2;
+    
+    height: 50px;
+    border-radius: 6px;
+    
+    width: calc(100% + 40px);
+    margin-left: -20px;
+}
+
+.menu-list > li > a,
+.menu-list > li > button {
+    text-decoration: none;
+    
+    font-size: 16px;
+    font-weight: bold;
+    color: #e4105d;
+
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.menu-list > li > a:hover,
+.menu-list > li > button:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+.menu-list > li:last-child {
+    margin-left: auto;
+    padding-right: 60px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+
+    background-color: #0b0b0b;
+    list-style: none;
+    font-size: 13px;
+    padding: 0;
+    width: 100%;
+}
+
+.submenu li {
+    margin: 5px 0px 8px 0px;
+    padding-left: 5px;
+}
+
+.submenu a {
+    color: white;
+    background-color: #0b0b0b;
+    text-decoration: none;
+    display: block;
+
+    transition: transform 0.2s ease;
+}
+
+.submenu a:hover {
+    color: rgb(228, 16, 93);
+    transform: scale(1.01);
+}
+
+.dropdown {
+    position: relative;
+    width: 260px;
+    justify-content: center;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+#formatting-summary {
+    background: linear-gradient(150deg, rgba(228, 16, 94, 0.521) 20%, rgba(21, 22, 27, 867) 50%);
+    width: 50%;
+    margin-bottom: 20px;
+
+    border-radius: 16px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.formatting-examples fieldset {
+    border-radius: 15px;
+    border-color: rgba(78, 78, 78, 0.521);
+}
+
+#main-footer {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    background-color: #0B0A12;
+
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+
+    padding: 20px;
+}
+
+/* Popup container */
+.feedback-popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Popup inner content */
+.feedback-popup-content {
+    background: rgb(21, 22, 27);
+    margin: 10% auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 0 15px;
+    position: relative;
+    text-align: center;
+}
+
+/* Close button */
+.feedback-close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Textarea */
+.feedback-textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    resize: vertical;
+    border-radius: 0 15px;
+}
+
+/* Send button */
+.feedback-send-btn {
+    padding: 8px 20px;
+    border: none;
+    background: #e4105d;
+    color: white;
+    border-radius: 0 5px;
+    cursor: pointer;
+}
+
+/* Button that opens the popup */
+.feedback-open-btn {
+    background: none;
+    border: none;
+    color: #2fa3dc !important;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0;
+
+    position: relative; top: -8px;
+}

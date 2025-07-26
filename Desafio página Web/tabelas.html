@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio HTML do Bootcamp Santander 2025 - Front-End</title>
+    <link rel="stylesheet" href=".css\style-tabelas.css">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/9393/9393395.png">
+</head>
+
+<body>
+    <section id="website-title">
+        <div class="title-content">
+            <img src="https://assets.dio.me/rkO44OeBRslqd4_xCfrfU81zuulhXYMCMGqL0RvsSOk/f:webp/h:120/q:80/L3RyYWNrcy9iZGM3Y2MxOS1jNzk2LTQ2YTItYjc2Ny1lOGJkYzIwMWZjYjgucG5n"
+                alt="Logotipo do Bootcamp Santander 2025 - Front-End" class="logo-bootcamp">
+            <img src="https://assets.dio.me/VTgUqMiPAIgvsFdSvgSnVAB5lrqnNxY_N8h8LknnQys/f:webp/q:80/w:120/L2Fzc2V0cy9kaW9tZS9sb2dvLWZ1bGwuc3Zn"
+                alt="Logotipo do Bootcamp Santander 2025 - Front-End" class="logo-dio">
+        </div>
+        <h1 id="course-title">Curso Primeiros passos com HTML<sup>5</sup></h1>
+    </section>
+
+    <div id="challenge-description">
+        <p>No curso Primeiros Passos com HTML do Bootcamp Santander 2025 - Front-End foi proposto um desafio que
+            consiste em elaborar um Website com estrutura básica, utilizando as tags aprendidas
+            durante as aulas práticas. Este é o Website entregue pela <a
+                href="https://www.linkedin.com/in/flaviafesantos/" target="_blank">Flayfe</a> e inspirado no desing da
+            <a href="https://www.dio.me/" target="_blank">Dio.me</a>.
+        </p>
+    </div>
+    <header id="main-header">
+        <nav id="menu">
+
+            <ul class="menu-list">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li class="dropdown"><a href="#">Módulos do curso</a>
+                    <ul class="submenu">
+                        <li><a href="introdução.html" target="_blank">Introdução ao HTML na Prática</a></li>
+                        <li><a href="formulários.html" target="_blank">Trabalhando com Formulários em HTML</a></li>
+                        <li><a href="estrutura.html" target="_blank">Estruturando seu HTML + Formatações</a></li>
+                        <li><a href="midia.html" target="_blank">Trabalhando com Mídias utilizando HTML</a></li>
+                        <li><a href="tabelas.html" target="_blank">Criando Tabelas com HTML</a></li>
+                        <li><a href="semantica.html" target="_blank">Entendendo HTML Semântico</a></li>
+                    </ul>
+                </li>
+
+                <li><button class="feedback-open-btn" onclick="openPopup()">
+                        <span style="font-size: 40px; line-height: 1; position: relative; top: 15px;">*</span>
+                        Opine aqui!</button></li>
+            </ul>
+        </nav>
+
+        <div id="feedback-popup" class="feedback-popup">
+            <div class="feedback-popup-content">
+                <button class="feedback-close-btn" onclick="closePopup()" aria-label="Close popup">&times;</button>
+                <h3>Deixe aqui sua opinião sobre este site</h3>
+                <textarea id="feedback-message" class="feedback-textarea"
+                    placeholder="Escreva sua mensagem aqui..."></textarea>
+                <button class="feedback-send-btn" onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tabelas-section">
+        <div id="tabelas-summary">
+            <h2>Criando Tabelas com HTML</h2>
+            <p> Anteriormente, as tabelas eram utilizadas para estruturar os sites, porém não usa-se mais por conta de
+                três motivos principais: <br>
+                Semântica - espera-se dados tabulares, mas acaba "enganando" os navegadores, leitores de tela e motores
+                de busca <br>
+                Acessibilidade - devido a dificuldade de interpretar os dados que estáo dentro da tag table, os leitores
+                de tela acabam se perdendo<br>
+                Tamanho do arquivo do HTML - a tabela acaba se tornando maior que as tags utilizadas hoje para
+                estruturação (div e span), deixando o site mais lento e a manutenção do código mais complexa.
+            </p>
+        </div>
+
+        <div class="table-container">
+            <table class="table-example"
+                summary="Tabela de exemplo referente aos filmes que estão em cartaz no Cinemark do Taguatinga Shopping que fica no Distrito Federal">
+                <caption>Filmes em Cartaz - Taguatinga Shopping</caption>
+                <thead>
+                    <tr>
+                        <th colspan="3" id="consultation-date">*Data da consulta: 25/07/2025</th>
+                    </tr>
+                    <tr>
+                        <th class="table-title">Título do filme</td>
+                        <th class="table-title">Tempo de filme</td>
+                        <th class="table-title">Classificação</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="QF" class="movies">
+                        <td class="movie-title">Quarteto Fantástico: Primeiros passos</td>
+                        <td class="movie-duration">115m</td>
+                        <td class="movie-rating-12">12 anos</td>
+                    </tr>
+                    <tr id="SM" class="movies">
+                        <td class="movie-title">Superman (2025)</td>
+                        <td class="movie-duration">130m</td>
+                        <td class="movie-rating-14">14 anos</td>
+                    </tr>
+                    <tr id="SF" class="movies">
+                        <td class="movie-title">Smurfs</td>
+                        <td class="movie-duration">90m</td>
+                        <td class="movie-rating-livre">Livre</td>
+                    </tr>
+                    <tr id="ES" class="movies">
+                        <td class="movie-title">Eu sei o que vocês fizeram no verão passado</td>
+                        <td class="movie-duration">110m</td>
+                        <td class="movie-rating-16">16 anos</td>
+                    </tr>
+                    <tr id="JW" class="movies">
+                        <td class="movie-title">Jurassic World: Recomeço</td>
+                        <td class="movie-duration">135m</td>
+                        <td class="movie-rating-14">14 anos</td>
+                    </tr>
+                    <tr id="CT" class="movies">
+                        <td class="movie-title">Como treinar o seu dragão</td>
+                        <td class="movie-duration">125m</td>
+                        <td class="movie-rating-10">10 anos</td>
+                    </tr>
+                    <tr id="F1" class="movies">
+                        <td class="movie-title">F1 - O filme</td>
+                        <td class="movie-duration">155m</td>
+                        <td class="movie-rating-12">12 anos</td>
+                    </tr>
+                    <tr id="BT" class="movies">
+                        <td class="movie-title">BTS Army: Forever We are young</td>
+                        <td class="movie-duration">95m</td>
+                        <td class="movie-rating-12">12 anos</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="2">Total de filmes</td>
+                        <td>8 filmes</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+    </div>
+
+    <footer id="main-footer">
+        <div class="footer-links">
+            <a href="https://web.dio.me/" target="_blank" class="footer-link">Dio.me</a>
+            <a href="https://www.santanderopenacademy.com/pt_pt/index.html" target="_blank"
+                class="footer-link">Santander Open Academy</a>
+        </div>
+        <iframe width="35%" height="20" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1733947578&color=%23ff5500&auto_play=true&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+    </footer>
+</body>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init("YOUR_EMAILJS_USER_ID"); // Substitua pelo seu User ID real
+    })();
+
+    function openPopup() {
+        document.getElementById("feedback-popup").style.display = "block";
+    }
+
+    function closePopup() {
+        document.getElementById("feedback-popup").style.display = "none";
+    }
+
+    function sendMessage() {
+        const message = document.getElementById("feedback-message").value;
+
+        if (message.trim() === "") {
+            alert("Please enter your feedback.");
+            return;
+        }
+
+        emailjs.send("your_service_id", "your_template_id", {
+            message: message
+        }).then(function (response) {
+            alert("Message sent successfully!");
+            closePopup();
+            document.getElementById("feedback-message").value = "";
+        }, function (error) {
+            alert("Error sending message. Please try again.");
+            console.error(error);
+        });
+    }
+</script>
+
+
+</html>
