@@ -1,0 +1,119 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f2ef;
+}
+
+h2 {
+    padding-top: 40px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+strong {
+    font-weight: 500;
+    font-style: italic;
+}
+
+figcaption {
+    font-size: 12px;
+}
+
+table {
+    border: 1px solid;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid;
+    vertical-align: middle;
+    padding: 2px 10px;
+}
+
+thead {
+    background-color: rgba(211, 211, 211, 0.486);
+}
+
+.elenco-container {
+    display: flex;
+    justify-content: center;
+}
+
+.elenco-item {
+    text-align: center;
+}
+
+.resultado-venceu {
+    color: green;
+    font-weight: 500;
+}
+
+.resultado-indicado {
+    color: rgb(0, 34, 128);
+    font-weight: 500;
+}
+
+.bar {
+    background-color: #f3f2ef;
+    padding: 15px;
+    border-top: solid 1px #cdcdcd;
+    border-bottom: solid 1px #cdcdcd;
+}
+
+.content {
+    max-width: 1440px;
+    margin: auto;
+    grid-gap: 3rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-areas: "sidebar main anchors";
+    grid-template-columns: minmax(0, 15rem) minmax(0, 2.5fr) minmax(0, 15rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.footer {
+    min-height: 100px;
+    border-top: solid 1px #cdcdcd;
+}
+
+.anchors {
+    border-left: solid 1px #cdcdcd;
+    padding-left: 15px;
+}
+
+.anchors a {
+    font-size: small;
+}
+
+.sidebar {
+    border-right: solid 1px #cdcdcd;
+}
+
+.sidebar a {
+    font-size: small;
+}
+
+figure {
+    text-align: center;
+}
+
+.logo img {
+    width: 70px;
+}
+
+.main img {
+    height: 300px;
+}
